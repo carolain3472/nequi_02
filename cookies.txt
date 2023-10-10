@@ -1,0 +1,28 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.nequi.com	TRUE	/	FALSE	1999999999	dtCookie	v_4_srv_12_sn_BEAC1161C0F2B4B61A137CE65712BEF1_perc_100000_ol_0_mul_1_app-3A8cf72b5a35a9f4d5_0
+.nequi.com.co	TRUE	/	FALSE	1999999999	dtCookie	v_4_srv_8_sn_F72161CB939E47D16CB6901F716568EB_perc_100000_ol_0_mul_1_app-3A67a367b276f91b02_0
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id_marketing	v1%3A169697628258288396
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id_ads	v1%3A169697628258288396
+.twitter.com	TRUE	/	FALSE	1999999999	personalization_id	v1_BibLQE1q7rjG1aU78kOzCg=="
+.twitter.com	TRUE	/	FALSE	1999999999	guest_id	v1%3A169697628258288396
+twitter.com	TRUE	/	FALSE	1999999999	SameSite	None
+www.linkedin.com	TRUE	/	FALSE	1999999999	JSESSIONID	ajax:5831868451662198864
+.www.linkedin.com	TRUE	/	FALSE	1999999999	SameSite	None
+www.linkedin.com	TRUE	/	FALSE	1999999999	lang	v=2&lang=en-us
+.linkedin.com	TRUE	/	FALSE	1999999999	lidc	b=OGST06:s=O:r=O:a=O:p=O:g=2751:u=1:x=1:i=1696976282:t=1697062682:v=2:sig=AQE0dx555hWyk95fqAd2H0bmFNKDSPgD"
+.youtube.com	TRUE	/	FALSE	1999999999	GPS	1
+.youtube.com	TRUE	/	FALSE	1999999999	YSC	RZHzUD19Kmk
+.youtube.com	TRUE	/	FALSE	1999999999	VISITOR_INFO1_LIVE	A8GpRe85xUc
+.youtube.com	TRUE	/	FALSE	1999999999	VISITOR_PRIVACY_METADATA	CgJDTxICGgA%3D
+www.youtube.com	TRUE	/	FALSE	1999999999	SameSite	lax
+.google.com	TRUE	/	FALSE	1999999999	NID	511=FIx381MW9mAZ6B4jnxt6jf4g_F_l4-ZeNQrsuXSUklw3HnY0peWLGNAniSlVRU6cVEOLEcYdGvTX6_0RC9gMJelWO7YTT7rEmlrvsMsvvyglygrxKBpWNCKX9SMY32bT_bgZlCZNwHcAaqRF5gYLf8klmePKpqwdZOwgTvim-mU
+.apple.com	TRUE	/	FALSE	1999999999	geo	CO
+appgallery.huawei.com	TRUE	/	FALSE	1999999999	HWWAFSESID	03158bbd5be7b32a33
+appgallery.huawei.com	TRUE	/	FALSE	1999999999	HWWAFSESTIME	1696976285840
+.ayuda.nequi.com.co	TRUE	/	FALSE	1999999999	__cfruid	22aec2f8c3868252ab4054aa853091442e4fb83d-1696976295
+ayuda.nequi.com.co	TRUE	/	FALSE	1999999999	SameSite	None
+.linkedin.com	TRUE	/	FALSE	1999999999	bcookie	v=2&047a165c-36a5-482f-8a01-23270ffaa0f3"
+.www.linkedin.com	TRUE	/	FALSE	1999999999	bscookie	v=1&20231010221820115cbaeb-0685-4db6-89b4-5a1502514535AQHz60Hi3Y9WIJowM36CXt5OEbOF76jV"
+www.linkedin.com	TRUE	/	FALSE	1999999999	SameSite	None
+
