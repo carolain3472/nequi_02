@@ -1,5 +1,0 @@
-{
-  "projects": {
-    "default": "nequi-fa804"
-  }
-}
